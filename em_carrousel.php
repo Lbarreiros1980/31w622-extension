@@ -45,13 +45,13 @@ add_action("wp_enqueue_scripts","em_enqueue");
 
 
 
-function boite_carrousel(){
+function em_boite_carrousel(){
     /////////////////////////////////////// HTML
     // Le conteneur d'une boîte
     $contenu = 
     "<button class='bouton'>Ouvrir carrousel</button>"
-     ."<div class='carrousel'>"
-        .'<button class="carrousel__x">X<button>'
+     .'<div class="carrousel">'
+        .'<button class="carrousel__x">X</button>'
         .'<figure class="carrousel__figure"></figure>'
         .'<form class="carrousel__form"></form>'
     . '</div> <!-- fin class="carrousel" -->';
@@ -59,4 +59,4 @@ function boite_carrousel(){
     return $contenu;
    }
 
-   add_shortcode('em_carrousel', 'boite_carrousel');
+   add_shortcode('em_carrousel', 'em_boite_carrousel');
